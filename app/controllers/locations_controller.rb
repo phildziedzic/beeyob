@@ -8,7 +8,10 @@ class LocationsController < ApplicationController
 
   def create
     @location = Location.create(safe_params)
-    redirect_to '/'
+    @location.user = current_user
+    @location.save
+    flash[:success] = "Location Successfully Added"
+    redirect_to location_path(@location.id)
   end
 
   def new

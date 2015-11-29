@@ -1,3 +1,4 @@
 <h1><%= @location.name %></h1>
+Last updated at <%= @location.updated_at %> by <%= @location.user.name %>
 
 <div class = "button-link" ><%= link_to "Update This Location!", edit_location_path %></div>
