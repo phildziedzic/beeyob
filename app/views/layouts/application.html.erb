@@ -8,7 +8,34 @@
 </head>
 <body>
 
+<header class = "clearfix">
+  <h1>
+    <%= link_to 'Beeyob', root_path %>
+  </h1>
+  <nav class = "clearfix">
+    <ul>
+      <li><%= link_to 'Browse Locations', locations_path %></li>
+      <li><%= link_to 'Add a Location', new_location_path %></li>
+      <li>
+        <% if @current_user %>
+          Signed in as <%= @current_user.name %> | <%= link_to "Log Out", logout_path %>
+        <% else %>
+          <%= link_to 'Login', '/login' %> | <%= link_to 'Log In', login_path %>
+        <% end %>
+      </li>
+    </ul>
+</nav>
+</header>
+
 <%= yield %>
 
+
+<footer>
+	<p> Beeyob was created for General Assembly by Phil Dziedzic</p>
+</footer>
+
+
+
 </body>
+
 </html>

@@ -1,0 +1,32 @@
+<div>
+  <div>
+    <h2>Create A New Account:</h2>
+    <%= form_for @user do |f| %>
+      <label>
+        Full Name
+        <br />
+        <%= f.text_field :name %>
+      </label>
+      <br />
+      <label>
+        Email address
+        <br />
+        <%= f.text_field :email %>
+      </label>
+      <br />
+      <label>
+        Password
+        <br />
+        <%= f.password_field :password %>
+      </label>
+      <br />
+      <label>
+        Confirm password
+        <br />
+        <%= f.password_field :password_confirmation %>
+      </label>
+      <br />
+      <%= f.submit %>
+    <% end %>
+  </div>  
+</div>

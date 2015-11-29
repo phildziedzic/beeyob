@@ -1,4 +1,46 @@
 Rails.application.routes.draw do
+  root 'home#index'
+
+  resources :locations
+  resources :users, except:[:index, :destroy]
+
+  get  'login', to: 'users#login'
+  post 'login', to: 'users#authenticate'
+
+  get 'logout', to: 'users#logout'
+
+  get 'signup', to: 'users#new'
+  
+
+
+  # get 'home/index'
+
+  # get 'locations/index'
+
+  # get 'locations/create'
+
+  # get 'locations/new'
+
+  # get 'locations/update'
+
+  # get 'locations/edit'
+
+  # get 'locations/show'
+
+  # get 'users/create'
+
+  # get 'users/show'
+
+  # get 'users/edit'
+
+  # get 'users/update'
+
+  # get 'users/login'
+
+  # get 'users/logout'
+
+  # get 'users/authenticate'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

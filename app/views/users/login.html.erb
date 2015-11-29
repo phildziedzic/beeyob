@@ -1,0 +1,31 @@
+<div>
+  <section>
+    <div>
+      <% if notice %>
+        <h1><%= notice %></h1>
+      <% end %>
+      
+      <h2>Log in</h2>
+      <%= form_tag login_path, method: 'post' do %>
+        <div>
+          <label>
+            Username (Email)<br />
+            <%= text_field_tag :email %>
+          </label>
+        </div>
+
+        <div>
+          <label>
+            Password<br />
+            <%= password_field_tag :password %>
+          </label>
+        </div>
+
+        <%= submit_tag "Log in" %>
+      <% end %>
+    </div>
+  </section>
+</div>
+
+<p>OR</p>
+<p><%= link_to "Create An Account", new_user_path %></p>

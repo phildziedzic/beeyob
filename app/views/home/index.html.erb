@@ -1,0 +1,7 @@
+<h1>Welcome to Beeyob</h1>
+<p>The Crowdsourced BYOB Database</p>
+
+<%= form_tag locations_path, method: "GET" do %>
+	<%= text_field_tag :q, params[:q], :placeholder => "Enter location name, city, or zip code..." %>
+	<%= submit_tag "Search Locations" %>
+<% end %>

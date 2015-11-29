@@ -1,0 +1,37 @@
+<% @locations.each do |location| %>
+	<section>
+		<h3><%= link_to location.name, location %></h3>
+
+<!-- output byob rating -->
+		<% if location.byob == 1 %>
+			<p>
+				<strong>BYOB Rating: </strong> Good
+			</p>
+		<% elsif location.byob == 2 %>
+			<p>
+				<strong>BYOB Rating: </strong> Meh
+			</p>
+		<% elsif location.byob == 3 %>
+			<p>
+				<strong>BYOB Rating: </strong> Poor
+			</p>
+		<% else %>
+			<p>
+				<strong>BYOB Rating: </strong> Not Rated
+			</p>
+		<% end %>
+
+
+<!-- other location info -->
+		<p>
+			<%= location.phone %>
+		</p>
+
+		<p>
+			<% location.byob %>
+		</p>
+
+		///////////////////////////////////////////////////
+		
+	</section>
+<% end %>
