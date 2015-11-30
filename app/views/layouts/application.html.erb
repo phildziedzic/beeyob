@@ -4,34 +4,37 @@
   <title>Beeyob</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href='https://fonts.googleapis.com/css?family=Dosis:400,300,700' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <header class = "clearfix">
-  <h1>
-    <%= link_to 'Beeyob', root_path %>
-  </h1>
   <nav class = "clearfix">
+    <h1 id = "title">
+      <%= link_to 'Beeyob', root_path %>
+    </h1>
     <ul>
       <li><%= link_to 'Browse Locations', locations_path %></li>
       <li><%= link_to 'Add a Location', new_location_path %></li>
-      <li>
-        <% if @current_user %>
-          Signed in as <%= @current_user.name %> | <%= link_to "Log Out", logout_path %>
-        <% else %>
-          <%= link_to 'Log In', login_path %>
-        <% end %>
-      </li>
+      <em>
+        <li>
+          <% if @current_user %>
+            <li><%= @current_user.name %> | <%= link_to "Log Out", logout_path %></li>
+          <% else %>
+            <li><%= link_to 'Log In', login_path %></li>
+          <% end %>
+        </li>
+      </em>
     </ul>
-</nav>
+  </nav>
 </header>
 
 <%= yield %>
 
 
 <footer>
-	<p> Beeyob was created for General Assembly by Phil Dziedzic</p>
+	<p>&copy; 2015 <u><a href="https://www.behance.net/phildziedzic">Phil Dziedzic</a></u></p>
 </footer>
 
 

@@ -22,6 +22,7 @@ class LocationsController < ApplicationController
     @location = Location.find(params[:id])
       if @location.update safe_params
         flash.now[:notice] = "Location Updated!"
+        @location.user = current_user
         redirect_to location_path(@location.id)
       else
         flash.now[:notice] = "Location was not saved. Check your connection and try again!"

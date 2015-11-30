@@ -1,8 +1,8 @@
 <h1>Beeyob Locations:</h1>
 
 <%= form_tag locations_path, method: "GET" do %>
-	<%= text_field_tag :q, params[:q], :placeholder => "Enter location name, city, or zip code..." %>
-	<%= submit_tag "Search Locations" %>
+	<%= text_field_tag :q, params[:q], :placeholder => "Enter location name, city, or zip code...", :class => 'searchbar'  %>
+	<%= submit_tag "Search Locations", :class => 'searchbutton'  %>
 <% end %>
 
 <%= render "list" %>

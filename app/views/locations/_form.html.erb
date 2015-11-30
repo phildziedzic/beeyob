@@ -4,11 +4,17 @@
       <br />
       <%= f.text_field :name %>
     </div>
+
+<!-- turn this into a partial! -->
     <div>
-      <%= f.label :byob %>
-      <br />
-      <%= f.text_field :byob %>
+      <%= f.label :byob %><br />
+      <%= f.radio_button :byob, '0' %> n/a<br />
+      <%= f.radio_button :byob, '1' %> Good<br />
+      <%= f.radio_button :byob, '2' %> Meh<br />
+      <%= f.radio_button :byob, '3' %> Poor<br />
     </div>
+
+
     <div>
       <%= f.label :phone %>
       <br />

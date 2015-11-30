@@ -28,6 +28,7 @@ class UsersController < ApplicationController
 
   def logout
     session[:user_id] = nil
+    cookies.delete :user_name
     redirect_to root_path
   end
 

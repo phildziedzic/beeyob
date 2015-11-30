@@ -1,23 +1,29 @@
 <% @locations.each do |location| %>
 	<section>
-		<h3><%= link_to location.name, location %></h3>
+		<h3><u><%= link_to location.name, location %></u></h3>
 
 <!-- output byob rating -->
 		<% if location.byob == 1 %>
-			<p>
+			<p class = "byob-good">
 				<strong>BYOB Rating: </strong> Good
 			</p>
 		<% elsif location.byob == 2 %>
-			<p>
+			<p class = "byob-meh">
 				<strong>BYOB Rating: </strong> Meh
 			</p>
 		<% elsif location.byob == 3 %>
-			<p>
+			<p class = "byob-poor">
 				<strong>BYOB Rating: </strong> Poor
 			</p>
 		<% else %>
-			<p>
+			<p class = "byob-na">
 				<strong>BYOB Rating: </strong> Not Rated
+				<br>
+				<% if @current_user %>
+					<%= link_to 'Rate this location -->', location %>
+				<% else %>
+					<%= link_to 'Log in to rate -->', login_path %>
+				<% end %>
 			</p>
 		<% end %>
 
@@ -31,7 +37,7 @@
 			<% location.byob %>
 		</p>
 
-		///////////////////////////////////////////////////
+		<hr>
 		
 	</section>
 <% end %>
