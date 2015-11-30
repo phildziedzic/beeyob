@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get 'signup', to: 'users#new'  
 
+  post 'users', to: 'users#create'
+
 
   # get 'home/index'
 

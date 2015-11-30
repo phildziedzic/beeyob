@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
-#  is this necessary to associate?
   has_many :locations
 
   has_secure_password
