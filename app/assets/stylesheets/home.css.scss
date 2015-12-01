@@ -2,13 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/*------------ LANDING BACKGROUND -----------*/
+
+
 .landing-background {
-  padding: 3%;
-  height: 90%;
+  height: 100%;
   overflow: hidden;
-  background-image: image_url('map-bg.jpg');
+  background-image: image-url('map-perspective-bg-dark.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  box-sizing: border-box;
 }

@@ -28,9 +28,13 @@ require_tree
   clear: both;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   margin: 0;
-  margin-top: 80px;
   margin-bottom: 50px;
   box-sizing: border-box;
   text-align: center;
@@ -39,7 +43,22 @@ body {
   background-color: #f8f8f8;
 }
 
- a {
+.pushdown {
+  margin-top: 80px;
+}
+
+.landing-title {
+  margin-top: 200px;
+  color: white;
+  text-shadow: 2px 2px #00004d;
+  font-size: 36px;
+}
+
+.tagline {
+  color: white;
+}
+
+a {
   text-decoration: none;
   color: black;
 }
@@ -65,7 +84,8 @@ hr {
 }
 
 header {
-	position: fixed;
+	z-index: 100;
+  position: fixed;
   height: 40px;
   top: 0px;
   background-color: #00004d;
@@ -125,24 +145,6 @@ footer {
 footer a {
   color: white;
 }
-
-
-
-/*------------ LANDING BACKGROUND -----------*/
-
-.landing-background {
-  padding: 3%;
-  height: 100%;
-  overflow: hidden;
-  background-image: image-url("map-bg.jpg");
-/*  background-image: url(assets/images/map-bg.jpg);*/
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-
 
 
 /*------------ ALL LOCATIONS -----------*/
