@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+skip_before_action :current_user, only: [:login, :logout, :authenticate]
+
   def new
     @user = User.new
   end
@@ -11,6 +13,7 @@ class UsersController < ApplicationController
     else
       flash[:notice] = "Account not created, check fields and try again!"
       redirect_to signup_path
+    end
   end
 
   def show
@@ -42,7 +45,6 @@ class UsersController < ApplicationController
       redirect_to login_path
     end
   end
-end
 
 private
     def user_params

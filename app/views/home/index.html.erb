@@ -1,7 +1,10 @@
-<h1>Beeyob</h1>
-<p>A Crowdsourced BYOB Database</p>
 
-<%= form_tag locations_path, method: "GET" do %>
-	<%= text_field_tag :q, params[:q], :placeholder => "Search by location name, city, or zip code...", :class => 'searchbar' %>
-	<%= submit_tag "Search Locations", :class => 'searchbutton' %>
-<% end %>
+<div class "landing-background">
+	<h1>Beeyob</h1>
+	<p>A Crowdsourced BYOB Database</p>
+
+	<%= form_tag locations_path, method: "GET" do %>
+		<%= text_field_tag :q, params[:q], :placeholder => "Search by location name, city, or zip code...", :class => 'searchbar' %>
+		<%= submit_tag "Search Locations", :class => 'searchbutton' %>
+	<% end %>
+</div>

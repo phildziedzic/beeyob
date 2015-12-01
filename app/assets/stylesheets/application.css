@@ -127,6 +127,24 @@ footer a {
 }
 
 
+
+/*------------ LANDING BACKGROUND -----------*/
+
+.landing-background {
+  padding: 3%;
+  height: 100%;
+  overflow: hidden;
+  background-image: image-url("map-bg.jpg");
+/*  background-image: url(assets/images/map-bg.jpg);*/
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+
+
 /*------------ ALL LOCATIONS -----------*/
 
 .byob-good {
