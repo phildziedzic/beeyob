@@ -31,6 +31,9 @@ gem 'bcrypt', '~> 3.1.7'
 # add normalize.css to assets
 gem 'normalize-rails'
 
+# enable all platform features on heroku
+gem 'rails_12factor'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -44,7 +47,7 @@ end
 
 group :development do
   # use sqlite3 in development
-  gem 'sqlite3'
+  gem 'pg'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
@@ -52,6 +55,9 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
+# set ruby version for production
+# ruby '2.0.0'
 
 group :production do
   # use postgres for production
